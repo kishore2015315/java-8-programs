@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.*;
 
 public class Main {
@@ -20,6 +24,7 @@ public class Main {
             System.out.println(k1+","+v);
 
         });
+       datesPoc();
     }
 
     static class Person {
@@ -38,5 +43,15 @@ public class Main {
             sb.append('}');
             return sb.toString();
         }
+    }
+    private static void datesPoc(){
+        LocalDate date = LocalDate.now();
+        System.out.println(date);
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(localDateTime);
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+        System.out.println(zonedDateTime);
+        System.out.println(date.isAfter(LocalDate.of(2020,12,23)));
+        ZoneId.getAvailableZoneIds().forEach(System.out::println);
     }
 }
