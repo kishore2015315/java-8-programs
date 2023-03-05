@@ -1,10 +1,10 @@
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class Main {
-    private static List<String> list;
+    private static List list;
     static {
-        list.add("a");
+        list = new ArrayList<Integer>();
+        list.add(1);
     }
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -13,6 +13,13 @@ public class Main {
         System.out.println(k);
         Person a = new Person("kishore",24);
         System.out.println(a.toString());
+        Map<String,Integer> map = new HashMap<String,Integer>();
+        map.put("hai",1);
+        map.put("hello",2);
+        map.forEach((k1,v)->{
+            System.out.println(k1+","+v);
+
+        });
     }
 
     static class Person {
